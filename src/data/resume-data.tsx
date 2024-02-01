@@ -24,7 +24,7 @@ const RESUME_DATA = {
   about:
     "Computer scientist with wide range of skills intrests and experience. Currently focused on full-stack development.",
   summary:
-    "I have taken part in successfully seeing multiple products/projects from inception to release. I have 5+ years of experience working with different technology stacks in team and self-directed environments.",
+    "I have taken part in successfully seeing multiple products/projects from inception to release. I have over 5 years of experience working with different technology stacks in team and self-directed environments. I also have a strong understanding of the Agile methodology, Data structures and algorithms, as well as Object-oriented design, and I learn and pickup new technologies and tools quickly.",
   avatarUrl: "",
   personalWebsiteUrl: "https://jarocki.me",
   contact: {
@@ -113,7 +113,7 @@ const RESUME_DATA = {
       logo: OnTheStep,
       start: "June 2019",
       end: "February 2020",
-      description: "Working with an Agile Startup team to build back-end and front-end feature for OnTheStep's in house customer success system.",
+      description: "Working with an Agile Startup team to build back-end and front-end features for OnTheStep's in-house customer success system using node.js, Express, Angular and Typescript.",
     },
   ],
   skills: [
