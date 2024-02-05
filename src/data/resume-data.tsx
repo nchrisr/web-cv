@@ -22,7 +22,7 @@ const RESUME_DATA = {
   location: "Canada",
   locationLink: "https://www.google.com/maps/place/Canada",
   about:
-    "Computer scientist with wide range of skills intrests and experience. Currently focused on full-stack development.",
+    "Computer scientist with wide a range of skills intrests and experience. Currently focused on full-stack development.",
   summary:
     "I have over 5 years of experience working with different technology stacks in team and self-directed environments, and I have taken part in successfully seeing multiple products/projects from inception to release. I also have a strong understanding of the Agile methodology, Data structures and algorithms, as well as Object-oriented design, and I learn and pickup new technologies and tools quickly.",
   avatarUrl: "",
@@ -48,7 +48,7 @@ const RESUME_DATA = {
       link: "https://www.umanitoba.ca/",
       logo: UofM,
       school: "University of Manitoba",
-      degree: "Bachelor's Degree in Computer Science and a minor in Business Management",
+      degree: "Bachelor's Degree in Computer Science with a minor in Business Management",
       start: "2015",
       end: "2019",
     },
