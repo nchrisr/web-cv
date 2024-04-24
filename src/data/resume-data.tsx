@@ -85,7 +85,7 @@ const RESUME_DATA = {
         "Leveraged SQLite, C# and AWS cloud infrastructure to build, manage and improve Genovix Mobile. A client heavy cross platform (Android, ios and UWP) Mobile application for collecting and managing plant breeding data in low bandwith scenarios. Also handled setup and support for clients on relevant issues.",
     },
     {
-      company: "Centre for Earth Observation Science",
+      company: "Centre for Earth Observation Science ",
       link: "https://umanitoba.ca/earth-observation-science/",
       badges: [],
       title: "Data Analyst",
