@@ -71,7 +71,7 @@ const RESUME_DATA = {
       start: "October 2022",
       end: "January 2024",
       description:
-        "Leveraged Cloud based WebRTC technology, .NET Runtime, C#, Javascript and WASM in Collaboration with multiple agile teams to build and launch a Onsight NOW. A SaaS product equipped with AI assistant features for supporting field service workers.",
+        "Leveraged Cloud based WebRTC technology, .NET Runtime, C#, Javascript, WASM, and React in Collaboration with multiple agile teams to build and launch a Onsight NOW. A SaaS product equipped with AI assistant features for supporting field service workers.",
     },
     {
       company: "Agronomix Software Inc.",
