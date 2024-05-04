@@ -144,6 +144,7 @@ const RESUME_DATA = {
   tinkering: [
     {name: "Rust", level: SkillLevel.Low},
     {name: "React Native", level: SkillLevel.Low},
+    {name: "Ruby on Rails", level: SkillLevel.Low},
     {name: "Docker", level: SkillLevel.Low},
     {name: "Zero Knowledge Proofs", level: SkillLevel.Low},
   ],
