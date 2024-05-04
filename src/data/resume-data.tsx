@@ -137,7 +137,6 @@ const RESUME_DATA = {
     {name: "WebRTC", level: SkillLevel.High},
     {name: "Solidity", level: SkillLevel.Mid},
     {name: "Blockchain", level: SkillLevel.Mid},
-    {name: "Ganache", level: SkillLevel.Mid},
     {name: "Next", level: SkillLevel.Mid},
     {name: "Express", level: SkillLevel.High},
   ],
