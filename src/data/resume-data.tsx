@@ -138,6 +138,7 @@ const RESUME_DATA = {
     {name: "Solidity", level: SkillLevel.Mid},
     {name: "Blockchain", level: SkillLevel.Mid},
     {name: "Rust", level: SkillLevel.Low},
+    {name: "Next.js", level: SkillLevel.Low},
     {name: "Express", level: SkillLevel.High},
   ],
   tinkering: [
