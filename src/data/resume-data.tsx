@@ -118,7 +118,7 @@ const RESUME_DATA = {
   ],
   skills: [
     {name: "C#", level: SkillLevel.High},
-    {name: "Xamarin/MAUI", level: SkillLevel.High},
+    {name: "MAUI", level: SkillLevel.High},
     {name: ".NET", level: SkillLevel.High},
     {name: "Git", level: SkillLevel.High},
     {name: "MongoDB", level: SkillLevel.Mid},
@@ -137,7 +137,7 @@ const RESUME_DATA = {
     {name: "WebRTC", level: SkillLevel.High},
     {name: "Solidity", level: SkillLevel.Mid},
     {name: "Blockchain", level: SkillLevel.Mid},
-    {name: "Next", level: SkillLevel.Mid},
+    {name: "Rust", level: SkillLevel.Low},
     {name: "Express", level: SkillLevel.High},
   ],
   tinkering: [
