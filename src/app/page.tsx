@@ -83,71 +83,7 @@ export default function Page() {
             {RESUME_DATA.summary}
           </p>
         </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
-          {RESUME_DATA.work.map((work) => {
-            return (
-              <Card key={work.company}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
 
-                      <a className="hover:underline flex gap-2 items-center justify-center" href={work.link}>
-                        <Image src={work.logo} alt="Logo" width={30} height={30}/>
-                        {work.company}
-                      </a>
-
-                      <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                        ))}
-                      </span>
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end}
-                    </div>
-                  </div>
-
-                  <h4 className="font-mono text-sm leading-none font-semibold">
-                    {work.title}
-                  </h4>
-                </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education) => {
-            return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <a className="hover:underline flex gap-2 items-center justify-center" href={education.link}>
-                      <Image src={education.logo} alt="Logo" width={30} height={30}/>
-                      <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    </a>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
-              </Card>
-            );
-          })}
-        </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
@@ -218,13 +154,79 @@ export default function Page() {
         </Section>
 
         <Section>
+          <h2 className="text-xl font-bold">Work Experience</h2>
+          {RESUME_DATA.work.map((work) => {
+            return (
+              <Card className="mb-2" key={work.company}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+
+                      <a className="hover:underline flex gap-2 items-center justify-center" href={work.link}>
+                        <Image src={work.logo} alt="Logo" width={30} height={30}/>
+                        {work.company}
+                      </a>
+
+                      <span className="inline-flex gap-x-1">
+                        {work.badges.map((badge) => (
+                          <Badge
+                            variant="secondary"
+                            className="align-middle text-xs"
+                            key={badge}
+                          >
+                            {badge}
+                          </Badge>
+                        ))}
+                      </span>
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {work.start} - {work.end}
+                    </div>
+                  </div>
+
+                  <h4 className="font-mono text-sm leading-none font-semibold">
+                    {work.title}
+                  </h4>
+                </CardHeader>
+                <CardContent className="mt-2 text-xs">
+                  {work.description}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Education</h2>
+          {RESUME_DATA.education.map((education) => {
+            return (
+              <Card key={education.school}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <a className="hover:underline flex gap-2 items-center justify-center" href={education.link}>
+                      <Image src={education.logo} alt="Logo" width={30} height={30}/>
+                      <h3 className="font-semibold leading-none">
+                      {education.school}
+                    </h3>
+                    </a>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {education.start} - {education.end}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2">{education.degree}</CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+
+        <Section>
             <h2 className="text-xl font-bold">Proud moments :)</h2>
             <div className="flex flex-wrap gap-1">
               {RESUME_DATA.moments.map((moment) => {
                 return(
-                  <div className="hover:underline flex gap-2 items-center" key={moment.url}>
+                  <div className="hover:underline flex gap-2 items-center text-blue" key={moment.url}>
                     <a href={moment.url}>
-                      {<Badge key={moment.url}>{moment.Description}</Badge>}
+                      {<Badge variant="highlighted" key={moment.url}>{moment.Description}</Badge>}
                     </a>
                   </div>
                 );
