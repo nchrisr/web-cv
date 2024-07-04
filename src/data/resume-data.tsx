@@ -134,6 +134,7 @@ const RESUME_DATA = {
     {name: "Agile", level: SkillLevel.High},
     {name: "WebRTC", level: SkillLevel.High},
     {name: "Blockchain", level: SkillLevel.High},
+    {name: "React Native", level: SkillLevel.Mid},
     {name: "Next.js", level: SkillLevel.Mid},
     {name: "Solidity", level: SkillLevel.Mid},
     {name: "Rust", level: SkillLevel.Mid},
@@ -141,7 +142,6 @@ const RESUME_DATA = {
   ],
   tinkering: [
     {name: "Rust", level: SkillLevel.Low},
-    {name: "React Native", level: SkillLevel.Low},
     {name: "Ruby on Rails", level: SkillLevel.Low},
     {name: "Docker", level: SkillLevel.Low},
     {name: "Zero Knowledge Proofs", level: SkillLevel.Low},
