@@ -191,6 +191,7 @@ const RESUME_DATA = {
       techStack: [
         "Solidity",
         "Javascript",
+        "Typescript",
         "Zero Knowledge proofs"
       ],
       description:
