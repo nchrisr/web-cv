@@ -120,6 +120,7 @@ const RESUME_DATA = {
     {name: "Python", level: SkillLevel.High},
     {name: "C#", level: SkillLevel.High},
     {name: "Typescript/Javascript", level: SkillLevel.High},
+    {name: "Next.js", level: SkillLevel.High},
     {name: "HTML", level: SkillLevel.High},
     {name: "CSS", level: SkillLevel.High},
     {name: "SQL", level: SkillLevel.High},
@@ -135,7 +136,6 @@ const RESUME_DATA = {
     {name: "WebRTC", level: SkillLevel.High},
     {name: "Blockchain", level: SkillLevel.High},
     {name: "React Native", level: SkillLevel.Mid},
-    {name: "Next.js", level: SkillLevel.Mid},
     {name: "Solidity", level: SkillLevel.Mid},
     {name: "Rust", level: SkillLevel.Mid},
     {name: "MongoDB", level: SkillLevel.Mid}
