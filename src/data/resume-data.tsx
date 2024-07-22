@@ -135,7 +135,7 @@ const RESUME_DATA = {
     {name: "Agile", level: SkillLevel.High},
     {name: "WebRTC", level: SkillLevel.High},
     {name: "Blockchain", level: SkillLevel.High},
-    {name: "React Native", level: SkillLevel.Mid},
+    {name: "React Native", level: SkillLevel.High},
     {name: "Solidity", level: SkillLevel.Mid},
     {name: "Rust", level: SkillLevel.Mid},
     {name: "MongoDB", level: SkillLevel.Mid}
