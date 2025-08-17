@@ -6,10 +6,17 @@ Built with Next.js and shadcn/ui.
 
 # Features
 
-- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
+- Easily update by making chages to the [single config file](./src/data/resume-data.tsx)
 - Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
 - Auto generated Layout
 - Responsive for different devices
+
+# Running locally
+To run locally
+
+- Run `npm install`
+- Run `npm run dev`
+- Site can be accessed at `localhost:3000`
 
 # License
 

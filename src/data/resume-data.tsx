@@ -35,12 +35,7 @@ const RESUME_DATA = {
         name: "GitHub",
         url: "https://github.com/nchrisr",
         icon: GitHubIcon,
-      },
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/rodney-n-88a67b181/",
-        icon: LinkedInIcon,
-      },
+      }
     ],
   },
   education: [
@@ -118,8 +113,8 @@ const RESUME_DATA = {
   ],
   skills: [
     {name: "Python", level: SkillLevel.High},
-    {name: "C#", level: SkillLevel.High},
     {name: "Typescript/Javascript", level: SkillLevel.High},
+    {name: "C#", level: SkillLevel.High},
     {name: "HTML", level: SkillLevel.High},
     {name: "CSS", level: SkillLevel.High},
     {name: "SQL", level: SkillLevel.High},
@@ -128,16 +123,15 @@ const RESUME_DATA = {
     {name: "Express.js", level: SkillLevel.High},
     {name: ".NET", level: SkillLevel.High},
     {name: "Git", level: SkillLevel.High},
-    {name: "Microsoft Azure", level: SkillLevel.High},
     {name: "AWS", level: SkillLevel.High},
     {name: "Data Structures and Algorithms", level: SkillLevel.High},
     {name: "Object-orientation", level: SkillLevel.High},
     {name: "Agile", level: SkillLevel.High},
-    {name: "WebRTC", level: SkillLevel.High},
-    {name: "Blockchain", level: SkillLevel.High},
-    {name: "React Native", level: SkillLevel.High},
-    {name: "Solidity", level: SkillLevel.Mid},
     {name: "Rust", level: SkillLevel.Mid},
+    {name: "Blockchain", level: SkillLevel.Mid},
+    {name: "React Native", level: SkillLevel.Mid},
+    {name: "Microsoft Azure", level: SkillLevel.Mid},
+    {name: "Solidity", level: SkillLevel.Mid},
     {name: "MongoDB", level: SkillLevel.Mid}
   ],
   tinkering: [
