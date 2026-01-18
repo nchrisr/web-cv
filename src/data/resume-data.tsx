@@ -114,16 +114,17 @@ const RESUME_DATA = {
   skills: [
     {name: "Python", level: SkillLevel.High},
     {name: "Typescript/Javascript", level: SkillLevel.High},
-    {name: "C#", level: SkillLevel.High},
     {name: "HTML", level: SkillLevel.High},
     {name: "CSS", level: SkillLevel.High},
     {name: "SQL", level: SkillLevel.High},
     {name: "Next.js", level: SkillLevel.High},
     {name: "Node.js", level: SkillLevel.High},
     {name: "Express.js", level: SkillLevel.High},
+    {name: "C#", level: SkillLevel.High},
     {name: ".NET", level: SkillLevel.High},
     {name: "Git", level: SkillLevel.High},
     {name: "AWS", level: SkillLevel.High},
+    {name: "Docker", level: SkillLevel.High},
     {name: "Data Structures and Algorithms", level: SkillLevel.High},
     {name: "Object-orientation", level: SkillLevel.High},
     {name: "Agile", level: SkillLevel.High},
@@ -136,8 +137,6 @@ const RESUME_DATA = {
   ],
   tinkering: [
     {name: "Rust", level: SkillLevel.Low},
-    {name: "Ruby on Rails", level: SkillLevel.Low},
-    {name: "Docker", level: SkillLevel.Low},
     {name: "Zero Knowledge Proofs", level: SkillLevel.Low},
   ],
   projects: [
