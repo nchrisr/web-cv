@@ -24,7 +24,7 @@ const RESUME_DATA = {
   about:
     "Computer scientist with wide a range of skills, interests and experience. Currently focused on full-stack development.",
   summary:
-    "I have over 5 years of experience working with different technology stacks in team and self-directed environments, and I have taken part in successfully seeing multiple products/projects from inception to release. I also have a strong understanding of the Agile methodology, Data structures and algorithms, as well as Object-oriented design, and I learn and pickup new technologies and tools quickly.",
+    "I have over 6 years of experience working with different technology stacks in team and self-directed environments, and I have taken part in successfully seeing multiple products/projects from inception to release. I also have a strong understanding of the Agile methodology, Data structures and algorithms, as well as Object-oriented design, and I learn and pickup new technologies and tools quickly.",
   avatarUrl: "",
   personalWebsiteUrl: "https://nchrisr.github.io/web-cv/",
   contact: {
