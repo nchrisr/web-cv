@@ -118,6 +118,7 @@ const RESUME_DATA = {
     {name: "CSS", level: SkillLevel.High},
     {name: "SQL", level: SkillLevel.High},
     {name: "Next.js", level: SkillLevel.High},
+    {name: "React", level: SkillLevel.High},
     {name: "Node.js", level: SkillLevel.High},
     {name: "Express.js", level: SkillLevel.High},
     {name: "C#", level: SkillLevel.High},
