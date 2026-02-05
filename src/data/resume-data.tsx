@@ -173,7 +173,7 @@ const RESUME_DATA = {
         "iOS"
       ],
       description:
-        "Cross platform mobile application to support collection, and analysis of plat breeding data.",
+        "A Cross platform mobile application to support collection, and analysis of plat breeding data.",
       logo: GenovixMobile,
       link: {
         label: "Genovix",
