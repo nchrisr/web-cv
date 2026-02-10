@@ -189,7 +189,7 @@ const RESUME_DATA = {
         "Zero Knowledge proofs"
       ],
       description:
-        "Real Estate ownership transfer marketplace",
+        "A Decentralized Real Estate ownership transfer marketplace",
       link: {
         label: "Real Estate Marketplace",
         href: "https://github.com/nchrisr/Realestate-Marketplace",
