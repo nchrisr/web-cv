@@ -181,7 +181,7 @@ const RESUME_DATA = {
       },
     },
     {
-      title: "Real Estate Marketplace",
+      title: "Real Estate marketplace",
       techStack: [
         "Solidity",
         "Javascript",
