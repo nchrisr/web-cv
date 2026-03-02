@@ -198,7 +198,7 @@ const RESUME_DATA = {
   ],
   moments: [
     {Description: "Found and reported a bug in the Python Pandas module.", url: "https://github.com/pandas-dev/pandas/issues/26929"},
-    {Description: "Found and helped resolve an ios build issue with MAUI", url: "https://github.com/xamarin/xamarin-macios/issues/19229"},
+    {Description: "Found and helped resolve an ios build issue with .NET MAUI", url: "https://github.com/xamarin/xamarin-macios/issues/19229"},
   ]
 }
 
