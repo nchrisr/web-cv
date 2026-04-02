@@ -191,7 +191,7 @@ const RESUME_DATA = {
       description:
         "A decentralized Real Estate ownership transfer marketplace",
       link: {
-        label: "Real Estate Marketplace",
+        label: "Real-Estate Marketplace",
         href: "https://github.com/nchrisr/Realestate-Marketplace",
       },
     }
