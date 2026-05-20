@@ -5,11 +5,19 @@ import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import Image from "next/image";
 import { Section, SectionTitle } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import {
+  GlobeIcon,
+  MailIcon,
+  PhoneIcon,
+  LineChartIcon,
+  ShieldCheckIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import { SkillBadge } from "@/components/skill-badge";
+import { FocusAreaCard } from "@/components/focus-area-card";
+import { ThesisList } from "@/components/thesis-list";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -39,6 +47,17 @@ export default function Page() {
               <p className="text-pretty text-sm leading-relaxed text-muted-foreground">
                 {RESUME_DATA.about}
               </p>
+              <div className="flex flex-wrap justify-center gap-2 pt-1 sm:justify-start">
+                {RESUME_DATA.headerBadges.map((label) => (
+                  <Badge
+                    key={label}
+                    variant="outline"
+                    className="border-primary/30 text-primary"
+                  >
+                    {label}
+                  </Badge>
+                ))}
+              </div>
               <a
                 className="inline-flex items-center gap-1.5 text-sm text-primary/80 hover:text-primary hover:underline"
                 href={RESUME_DATA.locationLink}
@@ -97,6 +116,71 @@ export default function Page() {
           <p className="text-pretty text-sm leading-relaxed text-muted-foreground">
             {RESUME_DATA.summary}
           </p>
+          <div className="space-y-2">
+            <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+              Core stack
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {RESUME_DATA.coreStack.map((tech) => (
+                <Badge
+                  key={tech}
+                  variant="secondary"
+                  className="border-primary/20 bg-primary/10 px-2.5 py-0.5 text-sm font-semibold text-primary"
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </Section>
+
+        <Section>
+          <SectionTitle>Projects</SectionTitle>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+            {RESUME_DATA.projects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                tags={project.techStack}
+                link={"link" in project ? project.link.href : undefined}
+                logo={project.logo}
+              />
+            ))}
+          </div>
+        </Section>
+
+        <Section>
+          <SectionTitle>Areas of interest</SectionTitle>
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+            <FocusAreaCard
+              icon={LineChartIcon}
+              title={RESUME_DATA.finance.title}
+              summary={RESUME_DATA.finance.summary}
+              topics={RESUME_DATA.finance.topics}
+            >
+              <div className="space-y-2">
+                <p className="text-xs font-medium uppercase tracking-wider text-primary">
+                  Theses & write-ups
+                </p>
+                <ThesisList
+                  theses={RESUME_DATA.finance.theses}
+                  emptyMessage={RESUME_DATA.finance.thesesEmptyMessage}
+                />
+              </div>
+            </FocusAreaCard>
+            <FocusAreaCard
+              icon={ShieldCheckIcon}
+              title={RESUME_DATA.zeroKnowledge.title}
+              summary={RESUME_DATA.zeroKnowledge.summary}
+              topics={RESUME_DATA.zeroKnowledge.topics}
+              highlight={{
+                label: RESUME_DATA.zeroKnowledge.bootcamp.label,
+                text: RESUME_DATA.zeroKnowledge.bootcamp.name,
+                href: RESUME_DATA.zeroKnowledge.bootcamp.url,
+              }}
+            />
+          </div>
         </Section>
 
         <Section>
@@ -141,30 +225,14 @@ export default function Page() {
         </Section>
 
         <Section className="print-force-new-page scroll-mb-16">
-          <SectionTitle>Projects</SectionTitle>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
-            {RESUME_DATA.projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                tags={project.techStack}
-                link={"link" in project ? project.link.href : undefined}
-                logo={project.logo}
-              />
-            ))}
-          </div>
-        </Section>
-
-        <Section>
           <SectionTitle>Work experience</SectionTitle>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             {RESUME_DATA.work.map((work) => (
               <Card
                 className="overflow-hidden border border-primary/15 bg-gradient-to-br from-card to-primary/[0.04] transition-colors hover:border-primary/30 print:shadow-none"
-                key={work.company}
+                key={`${work.company}-${work.start}`}
               >
-                <CardHeader className="pb-2">
+                <CardHeader>
                   <div className="flex items-start justify-between gap-x-2 text-base">
                     <h3 className="inline-flex flex-wrap items-center gap-x-2 font-semibold leading-snug">
                       <a
@@ -173,13 +241,15 @@ export default function Page() {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        <Image
-                          src={work.logo}
-                          alt=""
-                          width={28}
-                          height={28}
-                          className="rounded-md"
-                        />
+                        {"logo" in work && work.logo ? (
+                          <Image
+                            src={work.logo}
+                            alt=""
+                            width={28}
+                            height={28}
+                            className="rounded-md"
+                          />
+                        ) : null}
                         {work.company}
                       </a>
                       <span className="inline-flex flex-wrap gap-1">
@@ -202,8 +272,14 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="pt-0 text-xs leading-relaxed">
-                  {work.description}
+                <CardContent className="pt-0 font-sans text-xs leading-relaxed">
+                  <ul className="list-disc space-y-1.5 pl-4 text-muted-foreground">
+                    {work.highlights.map((item) => (
+                      <li key={item} className="text-pretty">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             ))}
@@ -218,7 +294,7 @@ export default function Page() {
                 className="border border-primary/15 bg-gradient-to-br from-card to-primary/[0.04]"
                 key={education.school}
               >
-                <CardHeader className="pb-2">
+                <CardHeader>
                   <div className="flex items-start justify-between gap-x-2 text-base">
                     <a
                       className="inline-flex items-center gap-2 font-semibold hover:text-primary hover:underline"

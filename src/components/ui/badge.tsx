@@ -33,7 +33,7 @@ export interface BadgeProps
 
 function Badge({className, variant, ...props }: BadgeProps) {
   return (
-    <div className="flex">
+    <div className="inline-flex">
       <div className={cn(badgeVariants({ variant }), className)} {...props} />
     </div>
   );
