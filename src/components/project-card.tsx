@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardTitle,
 } from "./ui/card";
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from "next/image";
 import { Badge } from "./ui/badge";
 
 interface Props {
@@ -18,36 +18,52 @@ interface Props {
 
 export function ProjectCard({ title, description, tags, link, logo }: Props) {
   return (
-    <Card className="flex flex-col overflow-hidden border border-muted p-3">
-      <CardHeader className="">
+    <Card className="flex h-full flex-col overflow-hidden border border-primary/15 bg-gradient-to-br from-card to-primary/[0.05] transition-colors hover:border-primary/30 hover:shadow-md hover:shadow-primary/5 print:shadow-none">
+      <CardHeader className="pb-2">
         <div className="space-y-1">
-          <CardTitle className="text-base">
+          <CardTitle className="text-base font-semibold">
             {link ? (
               <a
                 href={link}
                 target="_blank"
-                className="inline-flex items-center gap-1 hover:underline">
-                {logo !=null && <Image src={logo} alt="Logo" width={30} height={30}/> }  
-                {title}{" "}
-                <span className="size-1 rounded-full bg-green-500"></span>
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 hover:text-primary hover:underline"
+              >
+                {logo != null && (
+                  <Image
+                    src={logo}
+                    alt=""
+                    width={28}
+                    height={28}
+                    className="rounded-md"
+                  />
+                )}
+                {title}
+                <span
+                  className="size-1.5 rounded-full bg-primary"
+                  aria-hidden
+                />
               </a>
             ) : (
               title
             )}
           </CardTitle>
-          <div className="hidden font-mono text-xs underline print:visible">
-            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+          <div className="hidden font-mono text-xs text-primary/70 underline print:visible">
+            {link
+              ?.replace("https://", "")
+              .replace("www.", "")
+              .replace(/\/$/, "")}
           </div>
-          <CardDescription className="font-mono text-xs">
+          <CardDescription className="text-xs leading-relaxed">
             {description}
           </CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex">
-        <div className="mt-2 flex flex-wrap gap-1">
+      <CardContent className="mt-auto flex pt-0">
+        <div className="flex flex-wrap gap-1">
           {tags.map((tag) => (
             <Badge
-              className="px-1 py-0 text-[10px]"
+              className="px-1.5 py-0 text-[10px] font-normal"
               variant="secondary"
               key={tag}
             >

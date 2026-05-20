@@ -35,7 +35,12 @@ const RESUME_DATA = {
         name: "GitHub",
         url: "https://github.com/nchrisr",
         icon: GitHubIcon,
-      }
+      },
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/rodney-n-88a67b181/",
+        icon: LinkedInIcon,
+      },
     ],
   },
   education: [
@@ -104,7 +109,7 @@ const RESUME_DATA = {
       company: "OnTheStep",
       link: "https://www.onthestep.ca/",
       badges: ["Part Time", "Contract"],
-      title: "Software Developer",
+      title: "Software Developer/cofounder",
       logo: OnTheStep,
       start: "June 2019",
       end: "February 2020",
@@ -113,6 +118,7 @@ const RESUME_DATA = {
   ],
   skills: [
     {name: "Python", level: SkillLevel.High},
+    {name: "Rust", level: SkillLevel.High},
     {name: "Typescript/Javascript", level: SkillLevel.High},
     {name: "HTML", level: SkillLevel.High},
     {name: "CSS", level: SkillLevel.High},
@@ -129,7 +135,6 @@ const RESUME_DATA = {
     {name: "Data Structures and Algorithms", level: SkillLevel.High},
     {name: "Object-orientation", level: SkillLevel.High},
     {name: "Agile", level: SkillLevel.High},
-    {name: "Rust", level: SkillLevel.Mid},
     {name: "Blockchain", level: SkillLevel.Mid},
     {name: "React Native", level: SkillLevel.Mid},
     {name: "Microsoft Azure", level: SkillLevel.Mid},
@@ -137,7 +142,6 @@ const RESUME_DATA = {
     {name: "MongoDB", level: SkillLevel.Mid}
   ],
   tinkering: [
-    {name: "Rust", level: SkillLevel.Low},
     {name: "Zero Knowledge Proofs", level: SkillLevel.Low},
   ],
   projects: [

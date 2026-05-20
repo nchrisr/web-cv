@@ -4,65 +4,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    --background: 214 45% 97%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 220.9 39.3% 11%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 217 72% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
+    --secondary: 214 40% 92%;
+    --secondary-foreground: 217 40% 25%;
 
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --muted: 214 35% 93%;
+    --muted-foreground: 215 16% 42%;
 
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
+    --accent: 214 60% 92%;
+    --accent-foreground: 217 72% 38%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 71.4% 4.1%;
+    --border: 214 32% 86%;
+    --input: 214 32% 86%;
+    --ring: 217 72% 45%;
 
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
-
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
+    --radius: 0.625rem;
   }
 }
 
@@ -71,10 +41,33 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(
+        ellipse 90% 60% at 50% -15%,
+        hsl(217 72% 45% / 0.1),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 100% 0%,
+        hsl(214 60% 92% / 0.8),
+        transparent
+      );
+  }
+}
+
+@layer utilities {
+  .cv-surface {
+    @apply w-full border-y border-primary/15 bg-card/95 shadow-md shadow-primary/5 backdrop-blur-sm md:rounded-xl md:border md:shadow-lg;
   }
 }
 
 .print-force-new-page {
   page-break-before: always;
+}
+
+@media print {
+  body {
+    background: white !important;
+    background-image: none !important;
+  }
 }
