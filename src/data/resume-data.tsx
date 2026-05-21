@@ -4,6 +4,7 @@ import {
   GenovixMobile,
   MobilityHouse,
   OnTheStep,
+  TradeShare,
   UofM,
   Udacity,
   ValuePartners
@@ -27,22 +28,28 @@ const RESUME_DATA = {
   headerBadges: [
     "Python",
     "Rust",
+    "Node.js",
+    "React",
+    "Next.js",
     "Finance & markets",
     "Zero-knowledge cryptography",
   ],
   summary:
-    "I have over 6 years of experience shipping products across cloud, mobile, and web stacks in team and self-directed environments. I am especially interested in forward deployment roles where I can pair backend-leaning engineering with more customer-facing work, working closely with users to solve real problems in the field. Alongside engineering, I actively study equity markets and options, writing theses on individual names and structures, and I am deepening my work in zero-knowledge proofs and privacy-preserving protocols through hands-on projects and structured study.",
+    "I have over 6 years of experience building and shipping products across cloud, mobile, and web stacks in team and self-directed environments. I am especially interested in forward deployment roles where I can pair my engineering skills with more customer-facing work, working closely with users to solve real problems in the field. Alongside engineering, I actively study equity markets and options, writing and sharing my thoughts on individual names and opportunities. I also have strong interest in in zero-knowledge proofs and privacy-preserving protocols and I am working to deepen my knowledge through working on projects and engaging in structured study.",
   coreStack: [
     "Python",
     "Rust",
     "TypeScript",
+    "Node.js",
+    "React",
+    "Next.js",
     "AWS",
     "Docker",
   ],
   finance: {
     title: "Finance & markets",
     summary:
-      "I follow public markets closely and treat investing as a discipline: researching businesses, modeling scenarios, and documenting equity and options theses. My Business Management minor and time at Value Partners Investments inform how I think about risk, operations, and software in financial contexts.",
+      "I follow public markets closely, researching businesses, modeling scenarios, and documenting equity and options theses. My Business Management minor and time at Value Partners Investments inform how I think about risk, operations, and software in financial contexts.",
     topics: [
       "Equity research",
       "Options & derivatives",
@@ -54,17 +61,17 @@ const RESUME_DATA = {
       {
         title: "Published investment theses",
         description:
-          "Versioned equity research on TradeShare (e.g. ASMT, ITRI, PLTR, NRG).",
-        type: "Equity" as const,
+          "Equity research with potential for asymetric long term returns on TradeShare.",
+        type: "Equities" as const,
         url: "https://nchrisr.tradeshare.app/theses",
         status: "published" as const,
       },
       {
-        title: "DNN $3 Call (Jan 2028)",
+        title: "Published Option Play ideas",
         description:
-          "Long-dated uranium LEAP options play on Denison Mines (Phoenix ISR, supply deficit thesis).",
+          "Options plays with potential for asymetric medium to long term returns on TradeShare.",
         type: "Options" as const,
-        url: "https://nchrisr.tradeshare.app/plays/13",
+        url: "https://nchrisr.tradeshare.app/plays",
         status: "published" as const,
       },
     ],
@@ -74,7 +81,7 @@ const RESUME_DATA = {
   zeroKnowledge: {
     title: "Zero-knowledge & cryptography",
     summary:
-      "I am focused on ZK proofs, circuits, and the protocols that use them for privacy and verifiable computation, from SNARK-based systems to application-layer designs. My Real Estate marketplace project explored ZK in a Solidity context, and I am now leveling up through dedicated study and implementation work.",
+      "I am very interested in ZK proofs, circuits, and the protocols that use them for privacy and verifiable computation, from SNARK-based systems to application-layer designs. My Real Estate marketplace project explored ZK in a Solidity context, but I would like to work on more complex ZK applications in the future.",
     bootcamp: {
       label: "Upcoming",
       name: "RareSkills ZK Bootcamp",
@@ -86,6 +93,7 @@ const RESUME_DATA = {
       "Privacy protocols",
       "Rust",
       "Solidity",
+      "Circom",
     ],
   },
   avatarUrl: "",
@@ -196,14 +204,15 @@ const RESUME_DATA = {
       start: "May 2017",
       end: "December 2017",
       highlights: [
-        "Built serverless infrastructure on Python, C#, and Microsoft Azure.",
-        "Automated daily processes during migration from in-house servers to the cloud.",
+        "Learned cloud computing and financial markets while supporting an investment management firm.",
+        "Automated analysis of stock price data and trends by building a serverless system on Microsoft Azure using cloud storage, processing queues, Python, C#, and price history from a RESTful API.",
+        "Automated daily and monthly processes using Logic Apps, Azure Functions, and Python scripts.",
       ],
     },
     {
       company: "OnTheStep",
       link: "https://www.onthestep.ca/",
-      badges: ["Part Time", "Contract"],
+      badges: [],
       title: "Software Developer, Founding Team",
       logo: OnTheStep,
       start: "June 2019",
@@ -233,7 +242,11 @@ const RESUME_DATA = {
     {name: "Data Structures and Algorithms", level: SkillLevel.High},
     {name: "Object-orientation", level: SkillLevel.High},
     {name: "Agile", level: SkillLevel.High},
+    {name: "DCF modelling", level: SkillLevel.High},
+    {name: "DDM modelling", level: SkillLevel.High},
+    {name: "Options", level: SkillLevel.High},
     {name: "Zero Knowledge Proofs", level: SkillLevel.Mid},
+    {name: "Circom", level: SkillLevel.Mid},
     {name: "Blockchain", level: SkillLevel.Mid},
     {name: "React Native", level: SkillLevel.Mid},
     {name: "Microsoft Azure", level: SkillLevel.Mid},
@@ -244,14 +257,10 @@ const RESUME_DATA = {
   projects: [
     {
       title: "TradeShare",
-      techStack: [
-        "Web application",
-        "Investment research",
-        "Thesis publishing",
-        "Options tracking",
-      ],
+      techStack: ["TypeScript", "Next.js", "React", "Node.js"],
       description:
-        "A web application where I share versioned investment theses, options plays, and market ideas.",
+        "A multi-tenant web application I built to share investment theses, options plays, and market ideas.",
+      logo: TradeShare,
       link: {
         label: "TradeShare",
         href: "https://nchrisr.tradeshare.app",
@@ -268,7 +277,7 @@ const RESUME_DATA = {
         "CSS",
         "WebRTC"
       ],
-      description: "A Saas platform for field service workers.",
+      description: "A Saas platform for field service workers. I worked on this during my time at LibreStream Technologies",
       logo: Librestream,
       link: {
         label: "Onsight NOW",
