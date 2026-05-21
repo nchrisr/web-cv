@@ -51,14 +51,22 @@ const RESUME_DATA = {
       "Financial software",
     ],
     theses: [
-      // Add entries when ready, e.g.:
-      // {
-      //   title: "Example Corp - long thesis",
-      //   description: "Brief note on thesis angle.",
-      //   type: "Equity",
-      //   url: "https://...",
-      //   status: "published",
-      // },
+      {
+        title: "Published investment theses",
+        description:
+          "Versioned equity research on TradeShare (e.g. ASMT, ITRI, PLTR, NRG).",
+        type: "Equity" as const,
+        url: "https://nchrisr.tradeshare.app/theses",
+        status: "published" as const,
+      },
+      {
+        title: "DNN $3 Call (Jan 2028)",
+        description:
+          "Long-dated uranium LEAP options play on Denison Mines (Phoenix ISR, supply deficit thesis).",
+        type: "Options" as const,
+        url: "https://nchrisr.tradeshare.app/plays/13",
+        status: "published" as const,
+      },
     ],
     thesesEmptyMessage:
       "Investment theses on stocks and options plays will be linked here as they are published.",
@@ -234,6 +242,21 @@ const RESUME_DATA = {
   ],
   tinkering: [] as { name: string; level: number }[],
   projects: [
+    {
+      title: "TradeShare",
+      techStack: [
+        "Web application",
+        "Investment research",
+        "Thesis publishing",
+        "Options tracking",
+      ],
+      description:
+        "A web application where I share versioned investment theses, options plays, and market ideas.",
+      link: {
+        label: "TradeShare",
+        href: "https://nchrisr.tradeshare.app",
+      },
+    },
     {
       title: "Onsight NOW",
       techStack: [
