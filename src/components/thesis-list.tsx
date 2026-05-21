@@ -5,7 +5,7 @@ import { FileTextIcon, ExternalLinkIcon } from "lucide-react";
 export type Thesis = {
   title: string;
   description?: string;
-  type: "Equity" | "Options" | "Other";
+  type: "Equities" | "Options" | "Other";
   /** Omit until the write-up is hosted; card renders as coming soon when absent */
   url?: string;
   status?: "published" | "draft";
