@@ -109,18 +109,11 @@ export default function Page() {
               </Button>
             ))}
           </div>
-        </header>
-
-        <Section>
-          <SectionTitle>About</SectionTitle>
-          <p className="text-pretty text-sm leading-relaxed text-muted-foreground">
-            {RESUME_DATA.summary}
-          </p>
           <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+            <p className="text-center text-xs font-semibold uppercase tracking-wider text-primary sm:text-left">
               Core stack
             </p>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap justify-center gap-1.5 sm:justify-start">
               {RESUME_DATA.coreStack.map((tech) => (
                 <Badge
                   key={tech}
@@ -131,6 +124,23 @@ export default function Page() {
                 </Badge>
               ))}
             </div>
+          </div>
+        </header>
+
+        <Section>
+          <SectionTitle>Proud moments</SectionTitle>
+          <div className="flex flex-wrap gap-2">
+            {RESUME_DATA.moments.map((moment) => (
+              <a
+                key={moment.url}
+                href={moment.url}
+                target="_blank"
+                rel="noreferrer"
+                className="transition-opacity hover:opacity-80"
+              >
+                <Badge variant="highlighted">{moment.Description}</Badge>
+              </a>
+            ))}
           </div>
         </Section>
 
@@ -206,23 +216,6 @@ export default function Page() {
             </div>
           </Section>
         )}
-
-        <Section>
-          <SectionTitle>Proud moments</SectionTitle>
-          <div className="flex flex-wrap gap-2">
-            {RESUME_DATA.moments.map((moment) => (
-              <a
-                key={moment.url}
-                href={moment.url}
-                target="_blank"
-                rel="noreferrer"
-                className="transition-opacity hover:opacity-80"
-              >
-                <Badge variant="highlighted">{moment.Description}</Badge>
-              </a>
-            ))}
-          </div>
-        </Section>
 
         <Section className="print-force-new-page scroll-mb-16">
           <SectionTitle>Work experience</SectionTitle>
@@ -311,8 +304,8 @@ export default function Page() {
                       />
                       {education.school}
                     </a>
-                    <div className="shrink-0 text-xs tabular-nums text-muted-foreground">
-                      {education.start} – {education.end}
+                    <div className="shrink-0 text-xs text-muted-foreground">
+                      {education.end}
                     </div>
                   </div>
                 </CardHeader>

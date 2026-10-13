@@ -24,7 +24,7 @@ const RESUME_DATA = {
   location: "Canada",
   locationLink: "https://www.google.com/maps/place/Canada",
   about:
-    "Backend-leaning computer scientist interested in forward deployed engineering, finance, energy systems, sustainability, and zero-knowledge cryptography.",
+    "Backend-leaning computer scientist interested in forward deployed engineering, AI-integrated systems (RAG, MCP), finance, energy systems, sustainability, and zero-knowledge cryptography.",
   headerBadges: [
     "Python",
     "Rust",
@@ -35,7 +35,7 @@ const RESUME_DATA = {
     "Zero-knowledge cryptography",
   ],
   summary:
-    "I have over 6 years of experience building and shipping products across cloud, mobile, and web stacks in team and self-directed environments. I am especially interested in forward deployment roles where I can pair my engineering skills with more customer-facing work, working closely with users to solve real problems in the field. Alongside engineering, I actively study equity markets and options, writing and sharing my thoughts on individual names and opportunities. I also have strong interest in in zero-knowledge proofs and privacy-preserving protocols and I am working to deepen my knowledge through working on projects and engaging in structured study.",
+    "I have over 6 years of experience building and shipping products across cloud, mobile, and web stacks in team and self-directed environments. I am especially interested in forward deployment roles where I can pair my engineering skills with more customer-facing work, working closely with users to solve real problems in the field. I am also interested in building AI-integrated systems, including retrieval-augmented generation (RAG) and Model Context Protocol (MCP) tooling. Alongside engineering, I actively study equity markets and options, writing and sharing my thoughts on individual names and opportunities. I also have a strong interest in zero-knowledge proofs and privacy-preserving protocols, and I am working to deepen that knowledge through projects and structured study.",
   coreStack: [
     "Python",
     "Rust",
@@ -121,7 +121,7 @@ const RESUME_DATA = {
       school: "University of Manitoba",
       degree: "Bachelor's Degree in Computer Science with a minor in Business Management",
       start: "2015",
-      end: "2019",
+      end: "Completed",
     },
     {
       link: "https://www.udacity.com/course/blockchain-developer-nanodegree--nd1309",
@@ -129,7 +129,7 @@ const RESUME_DATA = {
       school: "Udacity",
       degree: "Blockchain Developer Nanodegree",
       start: "2021",
-      end: "2022",
+      end: "Completed",
     }
   ],
   work: [
@@ -141,7 +141,7 @@ const RESUME_DATA = {
         "Backend Software Engineer, Implementation & Solutions (Local Controller Specialist)",
       logo: MobilityHouse,
       start: "September 2024",
-      end: "Present",
+      end: "October 2026",
       highlights: [
         "Partner with stakeholders to troubleshoot charger deployments, guide setup, and support integration as an implementation-focused engineer.",
         "Develop and optimize core OCPP 1.6/2.x modules for charger integrations.",
@@ -259,7 +259,7 @@ const RESUME_DATA = {
       title: "TradeShare",
       techStack: ["TypeScript", "Next.js", "React", "Node.js"],
       description:
-        "A multi-tenant web application I built to share investment theses, options plays, and market ideas.",
+        "A multi-tenant web application I built to share investment theses, options plays, and market ideas. Paid users can query thesis details by prompting.",
       logo: TradeShare,
       link: {
         label: "TradeShare",
