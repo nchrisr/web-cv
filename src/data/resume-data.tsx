@@ -341,22 +341,88 @@ const RESUME_DATA = {
       label: "Merged PR",
       repo: "colbymchenry/codegraph",
       description:
-        "Fixed the MCP server hiding tools named in an explicit CODEGRAPH_MCP_TOOLS allowlist on small repos, with a regression test.",
+        "Fixed the MCP server hiding tools named in an explicit CODEGRAPH_MCP_TOOLS allowlist on small repos.",
       url: "https://github.com/colbymchenry/codegraph/pull/3463",
+      points: [
+        {
+          text: "On repos under 500 files, a small-repo filter silently dropped tools the allowlist named, so the listed and callable tools disagreed.",
+          url: "https://github.com/colbymchenry/codegraph/issues/3462",
+        },
+        {
+          text: "Changed the filter to trim only the default tool set, so an explicit allowlist always wins.",
+          url: "https://github.com/colbymchenry/codegraph/pull/3463",
+          badge: "Merged",
+        },
+        {
+          text: "Added a regression test that fails without the fix and passes with it.",
+        },
+      ],
     },
     {
       kind: "issue" as const,
-      label: "Bug report",
+      label: "Bug report · fixed",
       repo: "pandas-dev/pandas",
-      description: "Found and reported a bug in the Python Pandas module.",
+      description:
+        "Found and reported a data-corruption bug in how pandas shifts mixed-type DataFrames.",
       url: "https://github.com/pandas-dev/pandas/issues/26929",
+      points: [
+        {
+          text: "DataFrame.shift(axis=1) moved text columns into the next text column instead of the adjacent one.",
+          url: "https://github.com/pandas-dev/pandas/issues/26929",
+          badge: "Fixed",
+        },
+        {
+          text: "Narrowed the reproduction down with maintainers until the cause was clear.",
+        },
+        {
+          text: "Shared a workaround for anyone hitting it before the fix landed.",
+        },
+      ],
     },
     {
       kind: "issue" as const,
-      label: "Issue resolved",
+      label: "3 bug reports · 2 fixed",
+      repo: "Azure/azure-sdk-for-js",
+      description:
+        "Found and reported bugs in the Azure Communication Services web calling SDK.",
+      url: "https://github.com/Azure/azure-sdk-for-js/issues?q=is%3Aissue+author%3Anchrisr",
+      points: [
+        {
+          text: "A participant who joined muted still showed as unmuted to the caller.",
+          url: "https://github.com/Azure/azure-sdk-for-js/issues/26255",
+          badge: "Fixed",
+        },
+        {
+          text: "The screen-share preview video was missing the camera preview's styling, attributes and event handling.",
+          url: "https://github.com/Azure/azure-sdk-for-js/issues/27475",
+          badge: "Fixed",
+        },
+        {
+          text: "Removing a participant who had not yet connected left them in the call.",
+          url: "https://github.com/Azure/azure-sdk-for-js/issues/25909",
+        },
+      ],
+    },
+    {
+      kind: "issue" as const,
+      label: "Regression report · resolved",
       repo: "xamarin/xamarin-macios",
-      description: "Found and helped resolve an iOS build issue with .NET MAUI.",
+      description:
+        "Found and helped resolve an iOS build regression in .NET MAUI.",
       url: "https://github.com/xamarin/xamarin-macios/issues/19229",
+      points: [
+        {
+          text: "Building a MAUI iOS app from Windows, paired to an Apple silicon Mac, failed with missing arm64 symbols once a native-binding package was added.",
+          url: "https://github.com/xamarin/xamarin-macios/issues/19229",
+        },
+        {
+          text: "Supplied build logs and repro details until the maintainer reproduced it and confirmed the regression.",
+        },
+        {
+          text: "Tested the proposed workarounds and confirmed the one that worked while a fix was prepared.",
+          badge: "Resolved",
+        },
+      ],
     },
   ]
 }
