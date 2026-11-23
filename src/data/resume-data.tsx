@@ -1,5 +1,7 @@
 import {
+  AgentsHarness,
   Agronomix,
+  CrabShare,
   Librestream,
   GenovixMobile,
   MobilityHouse,
@@ -81,7 +83,7 @@ const RESUME_DATA = {
   zeroKnowledge: {
     title: "Zero-knowledge & cryptography",
     summary:
-      "I am very interested in ZK proofs, circuits, and the protocols that use them for privacy and verifiable computation, from SNARK-based systems to application-layer designs. My Real Estate marketplace project explored ZK in a Solidity context, but I would like to work on more complex ZK applications in the future.",
+      "I am very interested in ZK proofs, circuits, and the protocols that use them for privacy and verifiable computation, from SNARK-based systems to application-layer designs. I would like to work on real-world ZK applications in the future.",
     bootcamp: {
       label: "Upcoming",
       name: "RareSkills ZK Bootcamp",
@@ -233,7 +235,6 @@ const RESUME_DATA = {
     {name: "Next.js", level: SkillLevel.High},
     {name: "React", level: SkillLevel.High},
     {name: "Node.js", level: SkillLevel.High},
-    {name: "Express.js", level: SkillLevel.High},
     {name: "C#", level: SkillLevel.High},
     {name: ".NET", level: SkillLevel.High},
     {name: "Git", level: SkillLevel.High},
@@ -241,18 +242,22 @@ const RESUME_DATA = {
     {name: "Docker", level: SkillLevel.High},
     {name: "Data Structures and Algorithms", level: SkillLevel.High},
     {name: "Object-orientation", level: SkillLevel.High},
-    {name: "Agile", level: SkillLevel.High},
-    {name: "DCF modelling", level: SkillLevel.High},
-    {name: "DDM modelling", level: SkillLevel.High},
-    {name: "Options", level: SkillLevel.High},
     {name: "Zero Knowledge Proofs", level: SkillLevel.Mid},
     {name: "Circom", level: SkillLevel.Mid},
     {name: "Blockchain", level: SkillLevel.Mid},
-    {name: "React Native", level: SkillLevel.Mid},
     {name: "Microsoft Azure", level: SkillLevel.Mid},
-    {name: "Solidity", level: SkillLevel.Mid},
-    {name: "MongoDB", level: SkillLevel.Mid}
+    {name: "Solidity", level: SkillLevel.Mid}
   ],
+  aiCoding: {
+    title: "AI-assisted coding",
+    summary:
+      "Proficient at shipping with coding agents: scoping work, delegating it, and reviewing every change before it lands. I also build the guardrails around them, like risk-tiered reviews and dependency checks.",
+    tools: [
+      { name: "Claude Code", kind: "terminal" as const },
+      { name: "Codex", kind: "agent" as const },
+      { name: "Cursor", kind: "editor" as const },
+    ],
+  },
   tinkering: [] as { name: string; level: number }[],
   projects: [
     {
@@ -264,6 +269,30 @@ const RESUME_DATA = {
       link: {
         label: "TradeShare",
         href: "https://nchrisr.tradeshare.app",
+      },
+    },
+    {
+      title: "CrabShare",
+      techStack: ["Rust", "axum", "tokio", "WebRTC", "JavaScript"],
+      description:
+        "A privacy-first file and text sharing tool for devices on the same network. Peers find each other by subnet and transfer directly over encrypted WebRTC; the server never sees what is shared.",
+      openSource: true,
+      logo: CrabShare,
+      link: {
+        label: "CrabShare",
+        href: "https://github.com/nchrisr/CrabShare",
+      },
+    },
+    {
+      title: "Coding agents harness",
+      techStack: ["Python", "TypeScript", "Shell", "Claude Code", "Codex", "Gemini CLI"],
+      description:
+        "A portable, repo-agnostic harness for coding agents: risk-tiered reviews, built-in dependency security checks and an upgrade loop that feeds lessons from every project back in.",
+      openSource: true,
+      logo: AgentsHarness,
+      link: {
+        label: "Coding agents harness",
+        href: "https://github.com/nchrisr/coding-agents-harness",
       },
     },
     {
@@ -305,25 +334,30 @@ const RESUME_DATA = {
         href: "https://apps.apple.com/ca/app/genovix-mobile/id1517751271",
       },
     },
-    {
-      title: "Real Estate marketplace",
-      techStack: [
-        "Solidity",
-        "Javascript",
-        "Typescript",
-        "Zero Knowledge proofs"
-      ],
-      description:
-        "A decentralized Real Estate ownership transfer marketplace",
-      link: {
-        label: "Real-Estate Marketplace",
-        href: "https://github.com/nchrisr/Realestate-Marketplace",
-      },
-    }
   ],
   moments: [
-    {Description: "Found and reported a bug in the Python Pandas module.", url: "https://github.com/pandas-dev/pandas/issues/26929"},
-    {Description: "Found and helped resolve an ios build issue with .NET MAUI", url: "https://github.com/xamarin/xamarin-macios/issues/19229"},
+    {
+      kind: "pull-request" as const,
+      label: "Merged PR",
+      repo: "colbymchenry/codegraph",
+      description:
+        "Fixed the MCP server hiding tools named in an explicit CODEGRAPH_MCP_TOOLS allowlist on small repos, with a regression test.",
+      url: "https://github.com/colbymchenry/codegraph/pull/3463",
+    },
+    {
+      kind: "issue" as const,
+      label: "Bug report",
+      repo: "pandas-dev/pandas",
+      description: "Found and reported a bug in the Python Pandas module.",
+      url: "https://github.com/pandas-dev/pandas/issues/26929",
+    },
+    {
+      kind: "issue" as const,
+      label: "Issue resolved",
+      repo: "xamarin/xamarin-macios",
+      description: "Found and helped resolve an iOS build issue with .NET MAUI.",
+      url: "https://github.com/xamarin/xamarin-macios/issues/19229",
+    },
   ]
 }
 

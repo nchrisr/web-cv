@@ -14,13 +14,30 @@ interface Props {
   tags: readonly string[];
   link?: string;
   logo?: StaticImageData;
+  openSource?: boolean;
 }
 
-export function ProjectCard({ title, description, tags, link, logo }: Props) {
+export function ProjectCard({
+  title,
+  description,
+  tags,
+  link,
+  logo,
+  openSource,
+}: Props) {
   return (
     <Card className="flex h-full flex-col overflow-hidden border border-primary/15 bg-gradient-to-br from-card to-primary/[0.05] transition-colors hover:border-primary/30 hover:shadow-md hover:shadow-primary/5 print:shadow-none">
       <CardHeader>
         <div className="space-y-1">
+          {openSource ? (
+            <span className="inline-flex w-fit items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-700">
+              <span
+                className="size-1.5 rounded-full bg-emerald-500"
+                aria-hidden
+              />
+              Open source
+            </span>
+          ) : null}
           <CardTitle className="text-base font-semibold">
             {link ? (
               <a

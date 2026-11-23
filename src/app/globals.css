@@ -43,21 +43,28 @@
   body {
     @apply bg-background text-foreground antialiased;
     background-image: radial-gradient(
-        ellipse 90% 60% at 50% -15%,
-        hsl(217 72% 45% / 0.1),
+        ellipse 80% 50% at 50% -10%,
+        hsl(217 72% 45% / 0.14),
         transparent
       ),
-      radial-gradient(
-        ellipse 50% 40% at 100% 0%,
-        hsl(214 60% 92% / 0.8),
-        transparent
-      );
+      radial-gradient(hsl(217 40% 50% / 0.12) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      22px 22px;
   }
 }
 
 @layer utilities {
   .cv-surface {
-    @apply w-full border-y border-primary/15 bg-card/95 shadow-md shadow-primary/5 backdrop-blur-sm md:rounded-xl md:border md:shadow-lg;
+    @apply mx-auto w-full max-w-5xl overflow-hidden border-y border-primary/15 bg-card/95 shadow-md shadow-primary/5 backdrop-blur-sm md:rounded-2xl md:border md:shadow-xl;
+  }
+  .cv-hero {
+    background-image: radial-gradient(
+        ellipse 60% 120% at 100% 0%,
+        hsl(199 89% 48% / 0.35),
+        transparent
+      ),
+      linear-gradient(135deg, hsl(222 60% 16%), hsl(217 72% 32%));
   }
 }
 
